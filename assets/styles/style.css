@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap");
 :root {
   --header-height: 3.5rem;
   --hue: 14;
   --first-color: #f7089b;
   --first_color: #f84abb;
-  --tittle-color: hsl(var(--hue), 4%, 100%);
+  --title-color: hsl(var(--hue), 4%, 100%);
   --text-color: hsl(var(--hue), 4%, 95%);
   --text-color-light: hsl(var(--hue), 4%, 55%);
   --body-color: linear-gradient(
@@ -47,7 +47,7 @@
 
 body {
   margin: var(--header-height) 0 0 0;
-  font-size: var(--body-font);
+  font-family: var(--body-font);
   font-size: var(--normal-font-size);
   background: var(--body-color);
   color: var(--text-color);
@@ -94,4 +94,101 @@ button {
   font-size: var(--h2-font-size);
   margin-bottom: var(-mb-2);
   text-align: center;
+}
+
+.container {
+  max-width: 968px;
+  margin-left: var(--mb-1-5);
+  margin-right: var(--mb-1-5);
+}
+
+.grid {
+  display: grid;
+}
+
+.main {
+  overflow: hidden;
+}
+
+.button {
+  display: inline-block;
+  background-color: var(--first-color);
+  color: var(--title-color);
+  padding: 1rem 1.75rem;
+  border-radius: 0.5rem;
+  font-weight: var(--font-medium);
+  transition: 0.3s;
+}
+.button:hover {
+  background-color: var(--first-color-alt);
+}
+
+.header {
+  width: 100%;
+  background: var(--body-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+}
+
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__logo {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+}
+.nav__logo-img {
+  width: 4.5rem;
+}
+.nav__toogle {
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+.nav__close {
+  font-size: 1.8rem;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.7rem;
+  cursor: pointer;
+}
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.5rem;
+}
+.nav__link {
+  text-transform: uppercase;
+  font-weight: var(--font-black);
+  transition: 0.4s;
+}
+.nav__link:hover {
+  color: var(--text-color);
+}
+.nav__link, .nav__logo, .nav__toggle, .nav__close {
+  color: var(--title-color);
+}
+
+@media screen and (max-width: 767px) {
+  .nav__menu {
+    position: fixed;
+    width: 100%;
+    background: var(--container-color);
+    top: -150%;
+    left: 0;
+    padding: 3.5rem;
+    transition: 0.4s;
+    z-index: var(--z-fixed);
+    border-radius: 0 0 1.5rem 1.5rem;
+  }
+}
+.swiper-slide .home__content {
+  row-gap: 1rem;
 }/*# sourceMappingURL=style.css.map */

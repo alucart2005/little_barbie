@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap");
 //var
 :root {
   --header-height: 3.5rem;
@@ -7,7 +6,7 @@
   --hue: 14;
   --first-color: #f7089b;
   --first_color: #f84abb;
-  --tittle-color: hsl(var(--hue), 4%, 100%);
+  --title-color: hsl(var(--hue), 4%, 100%);
   --text-color: hsl(var(--hue), 4%, 95%);
   --text-color-light: hsl(var(--hue), 4%, 55%);
   //gradients
@@ -53,7 +52,7 @@
 }
 body {
   margin: var(--header-height) 0 0 0;
-  font-size: var(--body-font);
+  font-family: var(--body-font);
   font-size: var(--normal-font-size);
   background: var(--body-color);
   color: var(--text-color);
@@ -80,18 +79,115 @@ input {
   border: none;
   outline: none;
 }
-button{
+button {
   cursor: pointer;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
 }
 
 //css
-.section{
+.section {
   padding: 4.5rem 0 2rem;
 }
-.section__title{
+.section__title {
   font-size: var(--h2-font-size);
   margin-bottom: var(-mb-2);
   text-align: center;
+}
+//organizacion
+.container {
+  max-width: 968px;
+  margin-left: var(--mb-1-5);
+  margin-right: var(--mb-1-5);
+}
+.grid {
+  display: grid;
+}
+.main {
+  overflow: hidden;
+}
+//BUTTONS
+.button {
+  display: inline-block;
+  background-color: var(--first-color);
+  color: var(--title-color);
+  padding: 1rem 1.75rem;
+  border-radius: 0.5rem;
+  font-weight: var(--font-medium);
+  transition: 0.3s;
+  &:hover {
+    background-color: var(--first-color-alt);
+  }
+}
+//HEADER
+.header{
+  width: 100%;
+  background: var(--body-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+}
+.nav{
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__logo{
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    &-img{
+      width: 4.5rem;
+    }
+  }
+  &__toogle{
+    font-size: 1.25rem;
+    cursor: pointer;
+  }
+  &__close{
+    font-size: 1.8rem;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.7rem;
+    cursor: pointer;
+  }
+  &__list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1.5rem;
+  }
+  &__link{
+    text-transform: uppercase;
+    font-weight: var(--font-black);
+    transition: 0.4s;
+    &:hover{
+      color: var(--text-color);
+    }
+  }
+  &__link,&__logo,&__toggle,&__close{
+    color: var(--title-color);
+  }
+
+}
+@media screen and (max-width:767px){
+  .nav__menu{
+    position: fixed;
+    width: 100% ;
+    background: var(--container-color);
+    top: -150%;
+    left: 0;
+    padding: 3.5rem;
+    transition: 0.4s;
+    z-index: var(--z-fixed);
+    border-radius: 0 0 1.5rem 1.5rem ;
+
+  }
+}
+//HOME
+.swiper-slide{
+  .home__content{
+    row-gap: 1rem;
+  }
 }

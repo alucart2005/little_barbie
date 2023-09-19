@@ -18,7 +18,7 @@
   <body>
     <header class="header" id="header">
       <nav class="nav container">
-        <a href="#" class="nav-logo">
+        <a href="#" class="nav__logo">
           <img class="nav__logo-img" src="./assets/img/barbielogo.png" alt="" />
         </a>
         <div class="nav__menu" id="nav-menu">
@@ -43,13 +43,48 @@
             <i class="bx bx-x"></i>
           </div>
         </div>
-        <div class="nav__toogle" id="nav-toogle">
+        <div class="nav__toggle" id="nav-toggle">
           <i class="bx bx-grid-alt"></i>
         </div>
       </nav>
     </header>
-    <main>
-      <section id="home"></section>
+    <main class="main">
+      <section class="home container" id="home">
+        <div class="swiper home-swiper">
+          <div class="swiper_wrapper">
+            <section class="swiper-slide">
+              <div class="home__content grid">
+                <article class="content_burbuja">
+                  <img class="box" src="./assets/img/bb2.jpeg" alt="">
+                  <div class="blob">
+                    <img src="./assets/img/burbuja.svg" alt="">
+                  </div>
+                  <div class="blob">
+                    <img src="./assets/img/burbujasecun.svg" alt="">
+                  </div>
+                </article>
+                <div class="home__data">
+                  <h3 class="home__subtitle">#La Pelicula</h3>
+                  <h1 class="home__title">
+                    HEY <br>
+                    BARBIE<br/>
+                    !!!
+                  </h1>
+                  <P class="home__description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quisquam nobis, commodi sint ab asperiores! Natus, dignissimos provident! Assumenda provident ea soluta tempore fugit adipisci iusto culpa hic ad nesciunt.
+                  </P>
+                  <div class="home__buttons">
+                    <a href="#" class="button">Reservar Ahora</a>
+                    <a href="#" class="button--link button--flex">trailer
+                      <i class='bx bx-right-arrow-alt'></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
     </main>
     <footer></footer>
   </body>
