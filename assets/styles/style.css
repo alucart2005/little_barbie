@@ -110,7 +110,7 @@ button {
   overflow: hidden;
 }
 
-.button {
+/*.button {
   display: inline-block;
   background-color: var(--first-color);
   color: var(--title-color);
@@ -118,11 +118,10 @@ button {
   border-radius: 0.5rem;
   font-weight: var(--font-medium);
   transition: 0.3s;
-}
-.button:hover {
-  background-color: var(--first-color-alt);
-}
-
+  &:hover {
+    background-color: var(--first-color-alt);
+  }
+}*/
 .header {
   width: 100%;
   background: var(--body-color);
@@ -191,4 +190,73 @@ button {
 }
 .swiper-slide .home__content {
   row-gap: 1rem;
+}
+.swiper-slide .home__content .content_burbuja {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+.swiper-slide .home__content .content_burbuja .blob {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+}
+.swiper-slide .home__content .content_burbuja .blob:nth-child(2) {
+  filter: blur(20px);
+}
+.swiper-slide .home__content .content_burbuja .box {
+  position: absolute;
+  z-index: 100;
+  width: 400px;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-size: 200%;
+  background-position: center center;
+  transform-origin: 50% 50%;
+  transform-style: preserve-3d;
+  perspective: 100px;
+  transition: all 0.8s ease-in-out;
+  animation: form 10s ease-in-out infinite alternate;
+}
+.swiper-slide .home__data .home__subtitle {
+  font-size: var(--h3-font-size);
+  text-transform: uppercase;
+  margin-bottom: var(--mb-1);
+}
+.swiper-slide .home__data .home__title {
+  font-size: var(--biggest-font-size);
+  font-weight: var(--font-black);
+  line-height: 110%;
+  margin-bottom: var(--mb-1);
+}
+.swiper-slide .home__data .home__description {
+  margin-bottom: var(--mb-1);
+}
+.swiper-slide .home__data .home__buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+@keyframes form {
+  0% {
+    border-radius: 30% 70% 70% 30%/30% 35% 65% 70%;
+  }
+  20% {
+    border-radius: 52% 48% 51% 49%/66% 54% 46% 34%;
+  }
+  40% {
+    border-radius: 66% 34% 32% 68%/35% 64% 36% 65%;
+  }
+  60% {
+    border-radius: 42% 58% 70% 30%/68% 34% 66% 32%;
+  }
+  80% {
+    border-radius: 55% 45% 42% 58%/38% 70% 30% 62%;
+  }
+  100% {
+    border-radius: 30% 70% 70% 30%/30% 35% 65% 70%;
+  }
 }/*# sourceMappingURL=style.css.map */
