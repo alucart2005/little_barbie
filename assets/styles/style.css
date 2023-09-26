@@ -191,6 +191,7 @@ button {
 }
 .swiper-slide .home__content {
   row-gap: 1rem;
+  padding-top: 3rem;
 }
 .swiper-slide .home__content .content_burbuja {
   position: relative;
@@ -198,6 +199,7 @@ button {
   justify-content: center;
   align-items: center;
   min-height: 60vh;
+  z-index: -1;
 }
 .swiper-slide .home__content .content_burbuja .blob {
   position: absolute;
@@ -479,6 +481,15 @@ button {
   }
 }
 @media screen and (min-width: 992px) {
+  :root {
+    --biggest-font-size: 4rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
   .container {
     margin-left: auto;
     margin-right: auto;
