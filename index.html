@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Barbie</title>
+    <link rel="shortcut icon" href="./assets/img/barbielogo.png" type="image/x-icon">
     <link
       rel="shortcut icon"
       href="./assets/img/barbielogo.png"
@@ -27,19 +28,19 @@
               <a href="#home" class="nav__link active-link">Home</a>
             </li>
             <li class="nav__item">
-              <a href="#home" class="nav__link active-link">Actores</a>
+              <a href="#actors" class="nav__link active-link">Actores</a>
             </li>
             <li class="nav__item">
-              <a href="#home" class="nav__link active-link">Reparto</a>
+              <a href="#news" class="nav__link active-link">Reparto</a>
             </li>
             <li class="nav__item">
-              <a href="#home" class="nav__link active-link">Acerca de</a>
+              <a href="#about" class="nav__link active-link">Acerca de</a>
             </li>
             <li class="nav__item">
-              <a href="#home" class="nav__link active-link">Login</a>
+              <a href="#" class="nav__link active-link">Login</a>
             </li>
           </ul>
-          <div class="nav__close" id="nav__close">
+          <div class="nav__close" id="nav-close">
             <i class="bx bx-x"></i>
           </div>
         </div>
@@ -91,7 +92,7 @@
         </div>
       </section>
       <!-- Categorias -->
-      <section class="section categories" id="about">
+      <section class="section categories" id="actors">
         <h2 class="section__title">Actores</h2>
         <div class="category__container container grid">
           <div class="category__data">
@@ -122,7 +123,7 @@
         </div>
       </section>
       <!-- leave your email -->
-      <section class="section newsletter">
+      <section class="section newsletter" id="news">
         <div class="newsletter__container container">
           <h2 class="section__title">Nuestro Boletin</h2>
           <p class="newsletter__description">
@@ -194,7 +195,7 @@
             </li>
           </ul>
         </div>
-        <div class="footer__content">
+        <div class="footer__content" id="about">
           <h3 class="footer__title">Nuestra Compañia</h3>
           <ul class="footer__links">
             <li>
@@ -211,7 +212,12 @@
         <img src="./assets/img/ff1.png" class="footer__img-one" alt="" />
         <img src="./assets/img/ff2.png" class="footer__img-two" alt="" />
       </div>
+      <span class="footer__copy">&#169; Barbie page</span>
     </footer>
-    <span class="footer__copy">&#169; Barbie page</span>
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class="bx bx-up-arrow-alt scroll__icon"></i>
+    </a>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script src="./index.js"></script>
   </body>
 </html>
