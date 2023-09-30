@@ -86,6 +86,10 @@ button {
   font-size: var(--normal-font-size);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .section {
   padding: 4.5rem 0 2rem;
 }
@@ -524,7 +528,7 @@ button {
   position: fixed;
   background: var(--container-color);
   right: 1rem;
-  bottom: 1rem;
+  bottom: -20%;
   display: inline-flex;
   padding: 0.3rem;
   border-radius: 0.25rem;
@@ -539,6 +543,10 @@ button {
 .scrollup:hover {
   background: var(--container-color);
   opacity: 1;
+}
+
+.show-scroll {
+  bottom: 3rem;
 }
 
 @keyframes floating {
